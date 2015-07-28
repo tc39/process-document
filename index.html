@@ -43,7 +43,7 @@
       <th>Acceptance Signifies
       <th>Spec Quality
       <th>Post-Acceptance Changes Expected
-      <th>Implementation Types Expected
+      <th>Implementations Expected During This Stage
     </tr>
   </thead>
   <tr>
@@ -91,12 +91,13 @@
         <li>Above
         <li>Initial spec text
         <li>Identify designated reviewers
+        <li>Polyfill or transpiler implementations
       </ul>
     </td>
     <td>The committee expects the feature to be developed and eventually included in the standard
     <td>Draft: all <em>major</em> semantics, syntax and API are covered, but TODOs, placeholders and editorial issues are expected
     <td>Incremental
-    <td>Experimental, in a major browser VM
+    <td>Experimental, in major browser VMs
   </tr>
   <tr>
     <td>3
@@ -108,12 +109,13 @@
         <li>Complete spec text
         <li>Designated reviewers have signed off on the current spec text
         <li>The ECMAScript editor has signed off on the current spec text
+        <li>Experimental implementations committed to two major browser VMs
       </ul>
     </td>
     <td>The solution is complete and no further work is possible without implementation experience, significant usage and external feedback.
     <td>Complete: all semantics, syntax and API are completed described
     <td>Limited: only those deemed critical based on implementation experience
-    <td>Spec compliant, in a major browser VM
+    <td>Spec compliant and shipping without a flag, in two major browser VMs
   </tr>
   <tr>
     <td>4
@@ -125,12 +127,13 @@
         <li>Test 262 acceptance tests have been written for mainline usage scenarios
         <li>Two compatible implementations which pass the acceptance tests
         <li>The ECMAScript editor has signed off on the current spec text
+        <li>Shipping, spec-compliant implementations committed to two major browser VMs
       </ul>
     </td>
     <td>The addition will be included in the soonest practical standard revision
     <td>Final: All changes as a result of implementation experience are integrated
     <td>None
-    <td>Shipping, in major browser VMs
+    <td>N/A
   </tr>
 </table>
 
