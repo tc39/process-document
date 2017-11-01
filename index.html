@@ -107,6 +107,8 @@
         <li>Complete spec text
         <li>Designated reviewers have signed off on the current spec text
         <li>The ECMAScript editor has signed off on the current spec text
+        <li><a href="https://github.com/tc39/test262">Test262</a> acceptance tests have been written for mainline usage scenarios, in a PR
+        <li>If possible, there is an implementation in a polyfill or transpiler
       </ul>
     </td>
     <td>The solution is complete and no further work is possible without implementation experience, significant usage and external feedback.
@@ -121,9 +123,8 @@
     <td>
       <ul>
         <li>Above
-        <li><a href="https://github.com/tc39/test262">Test262</a> acceptance tests have been written for mainline usage scenarios, and merged
-        <li>Two compatible implementations which pass the acceptance tests
-        <li>Significant in-the-field experience with shipping implementations, such as that provided by two independent VMs
+        <li>Test262 tests are merged
+        <li>Two complete browser implementations, shipped in a preview release, which pass the test262 tests
         <li>A pull request has been sent to <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> with the integrated spec text
         <li>The ECMAScript editor has signed off on the pull request
       </ul>
@@ -172,7 +173,7 @@
 
 <h2>Test262 tests</h2>
 
-<p>During stage 3, <a href="https://github.com/tc39/test262">test262</a> tests should be authored and submitted via pull request. Once it has been appropriately reviewed, it should be merged to aid implementors in providing the feedback expected during this stage.
+<p>During Stage 2, <a href="https://github.com/tc39/test262">test262</a> tests should be authored and submitted via pull request. Once it has been appropriately reviewed and Stage 3 is reached, it should be merged to aid implementors in providing the feedback expected during this stage.
 
 <h2>Eliding the process</h2>
 
@@ -181,3 +182,13 @@
 <h2>Role of the editor</h2>
 
 <p>In-process additions will likely have spec text which is authored by a champion or a committee member other than the editor although in some case the editor may also be a champion with responsibility for specific features. The editor is responsible for the overall structure and coherence of the ECMAScript specification. It is also the role of the editor to provide guidance and feedback to spec text authors so that as an addition matures, the quality and completeness of its specification improves. It is also the role of the editor to integrate additions which have been accepted as “finished” (stage 4) into the a new revision of the specification.
+
+<h2>Browser implementations</h2>
+
+Browser implementations refer to web browsers such as Chromium, WebKit, Edge or Firefox. Implementations in web browsers often have additional constraints that other implementations don't have, such as a detailed understanding of web compatibility that comes from implementation so their experience is uniquely valuable. Specifically enfrancising browsers here, and differentiating them from transpilers, has the important benefit of making sure the committee doesn't add things to the specification that will never ship in the browser consensus.
+
+For Stage 4, this process only requires complete implementations delivered in a preview release in a browser, and not shipping in stable releases. Here, a preview release refers to a mechanism by which users can opt into newer, unstable versions of a browser. In some, this may be triggered by turning on an "advanced JavaScript features" flag in browser settings; in others, this may be done by using a particular "tech preview", "nightly" or "insider edition" version.
+
+<h2>Polyfill/transpiler implementations</h2>
+
+Implementations in polyfills or transpilers such as Babel, TypeScript, core.js and es6shim help with working out kinks in the specification and getting initial user feedback. These implementations are specifically invoked by users, rather than being present by default in the execution environment. They are somewhat complementary to native implementations, as they are lighter weight to develop and change, so they are requested at an earlier stage in the process.
