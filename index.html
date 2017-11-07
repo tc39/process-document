@@ -116,20 +116,35 @@
   </tr>
   <tr>
     <td>4
-    <td>Finished
-    <td>Indicate that the addition is ready for inclusion in the formal ECMAScript standard
+    <td>Advanced candidate
+    <td>Indicate that the addition is stable from significant implementation and test feedback
     <td>
       <ul>
         <li>Above
         <li><a href="https://github.com/tc39/test262">Test262</a> acceptance tests have been written for mainline usage scenarios, and merged
         <li>Two compatible implementations which pass the acceptance tests
+        <li>Two complete native implementations, such as that provided by two independent VMs
+      </ul>
+    </td>
+    <td>The solution has had implementation-dependent details taken into account, and no further work is possible without shipping experience.
+    <td>Ironed out: All changes as a result of implementation experience are integrated
+    <td>Very limited: Only necessary changes as a result of wider distribution of complete implementations, e.g., web-compatibility issues
+    <td>Native preview
+  </tr>
+  <tr>
+    <td>5
+    <td>Finished
+    <td>Indicate that the addition is ready for inclusion in the formal ECMAScript standard
+    <td>
+      <ul>
+        <li>Above
         <li>Significant in-the-field experience with shipping implementations, such as that provided by two independent VMs
         <li>A pull request has been sent to <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> with the integrated spec text
         <li>The ECMAScript editor has signed off on the pull request
       </ul>
     </td>
     <td>The addition will be included in the soonest practical standard revision
-    <td>Final: All changes as a result of implementation experience are integrated
+    <td>Final: All changes as a result of distribution experience are integrated
     <td>None
     <td>Shipping
   </tr>
@@ -181,3 +196,11 @@
 <h2>Role of the editor</h2>
 
 <p>In-process additions will likely have spec text which is authored by a champion or a committee member other than the editor although in some case the editor may also be a champion with responsibility for specific features. The editor is responsible for the overall structure and coherence of the ECMAScript specification. It is also the role of the editor to provide guidance and feedback to spec text authors so that as an addition matures, the quality and completeness of its specification improves. It is also the role of the editor to integrate additions which have been accepted as “finished” (stage 4) into the a new revision of the specification.
+
+<h2>Complete native implementation</h2>
+
+<p>To reach Stage 4, multiple specification-compliant native implementations are required. A native implementation is one which implements ECMAScript all the way from parsing through execution. Native implementations often face different constraints from other sorts of implementations, such as cross-compilers to earlier versions of the language which do not need to support features such as <code>eval</code>, though other such implementations provide useful feedback for the committee and are encouraged as well. An example of a native implementation with sufficient in-the-field experience is an implementation embedded in a web browser shipped to users in a "preview" mode, such as triggered by downloading a special version of the browser, or an option in preferences.</p>
+
+<h2>Significant in-the-field experience</h2>
+
+<p>To reach Stage 5, significant in-the-field experience is required. This means that the implementation must be available to a large number of users by default, without users triggering any sort of extra mechanism to opt in to the feature. For example, shipping in a stable version of a web browser, or a widely distributed version stable version of ECMAScript-powered web server software, would give significant in-the-field experience. This experience is useful to uncover compatibility issues discovered as a result of shipping.
