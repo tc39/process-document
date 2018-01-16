@@ -90,6 +90,7 @@
       <ul>
         <li>Above
         <li>Initial spec text
+        <li><a href="#risks">Risk areas</a> identified
       </ul>
     </td>
     <td>The committee expects the feature to be developed and eventually included in the standard
@@ -123,7 +124,7 @@
         <li>Above
         <li><a href="https://github.com/tc39/test262">Test262</a> acceptance tests have been written for mainline usage scenarios, and merged
         <li>Two compatible implementations which pass the acceptance tests
-        <li>Significant in-the-field experience with shipping implementations, such as that provided by two independent VMs
+        <li>Significant in-the-field experience with shipping implementations, such as that provided by two independent VMs, intended to address identified <a href="#risks">risk areas</a>
         <li>A pull request has been sent to <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> with the integrated spec text
         <li>The ECMAScript editor has signed off on the pull request
       </ul>
@@ -169,6 +170,19 @@
 <h2>Calls for implementation and feedback</h2>
 
 <p>When an addition is accepted at the “candidate” (stage 3) maturity level, the committee is signifying that it believes design work is complete and further refinement will require implementation experience, significant usage and external feedback.
+
+<h2 id="risks">Risk areas</h2>
+
+<p>There are many potential risk areas for a proposal. Some examples follow, but the committee may specify additional or modified risk areas, or none, as it sees fit. Risk areas should be identified as part of entrance into stage 2, so that champions can be sure to address these as efficiently as possible.</p>
+
+<ul>
+  <li>Implementation buy-in: do sufficient engines (including, but not limited to, web browsers) have interest in implementing the proposal? If added to the specification, will all engines implement it?
+  <li>Web compatibility: this applies in particular for API additions. Does the proposal create a new global identifier? Does it add a string property to a built-in object or prototype that might conflict with user code on the web?
+  <li>Implementability: can this proposal be effectively implemented and optimized by engines? Does the proposal place significant burden on implementations?
+  <li>Usability: will the community find the proposal ergonomic/intuitive/useful?
+</ul>
+
+<p>Note that a specific risk area may impose different criteria on a proposal reaching stage 4. For example, if "web compatibility" is a risk area, then it will likely be deemed necessary for a proposal to be shipping in two (stable, unflagged, non-nightly) web browsers prior to reaching stage 4 - whereas if it is not a risk area, other implementations (nightly/dev/canary web browsers, polyfills, transpilers, etc) may be enough to satisfy the "Significant in-the-field experience" requirement. To satisfy the "implementation buy-in" risk area, for example, at least one unflagged web browser implementation will likely be deemed necessary for any proposal to reach stage 4.
 
 <h2>Test262 tests</h2>
 
