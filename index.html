@@ -173,23 +173,23 @@
 
 <p>When an addition is accepted at the “candidate” (stage 3) maturity level, the committee is signifying that it believes design work is complete and further refinement will require implementation experience, significant usage and external feedback.
 
-<h2>Withholding Consensus for Advancement</h2>
+<h2>Cases where the committee does not come to consensus</h2>
 
-<p>During the discussion of a proposal in a given stage any aspect may be discussed, including issues that will be of concerns in a future stage of the proposal. Concerns related to future stages are not sufficient grounds for withholding consensus. A proposal’s advancement may be "blocked", or consensus may be withheld, in the case that the proposal has flaws in its current design as outlined by the process stages. There are two forms that this can take: A constraint or a block.
+<p>During the discussion of a proposal in a given stage any aspect may be discussed, including issues that will be of concerns in a future stage of the proposal. A proposal’s advancement may be "blocked", or consensus may be withheld, in the case that the proposal has flaws in its current design as outlined by the process stages. There are two forms that this typically takes: constraints or blocks.
 
-A constraint refers to an desired property of the proposal, accompanied by a rationale. Frequently, many different conflicting constraints are posited about proposals, and the committee collectively may make tradeoffs selecting a particular design even though it compromises one or more constraints.
+<p>A constraint refers to an desired property of the proposal, accompanied by a rationale. Frequently, many different conflicting constraints are posited about proposals, and the committee collectively may make tradeoffs selecting a particular design even though it compromises one or more constraints.
 
-Delegates may consider that the violation of a constraint is sufficiently serious reason to withhold consensus for stage advancement. If consensus is withheld, then this must be accompanied by a reason why a proposal should not advance in it's present form, that is recorded by the committee.
+<p>Delegates may consider that the violation of a constraint is sufficiently serious reason to withhold their consensus for stage advancement. If consensus is withheld, then this must be accompanied by a reason why a proposal should not advance in it's present form, that is recorded by the committee.
 
-In this case, the committee should provide an actionable plan whenever possible. The committee does not have an established concept of a rejected proposal--it is always possible for the champion to make changes and come back to ask for consensus.
+<p>In this case, the committee should provide an actionable plan whenever possible. The committee does not have an established concept of a rejected proposal--it is always possible for the champion to make changes and come back to ask for consensus.
 
-Not all issues with proposals may be constructively solved, however. Some issues are too fundamental and serious, requiring a significant rework of the proposal, or may be unsolvable. In these situations, if consensus is withheld, it may be referred to as a "block".
+<p>Not all issues with proposals may be constructively solved, however. Some issues are too fundamental and serious, requiring a significant rework of the proposal, or may be unsolvable. In these situations, if consensus is withheld, it may be referred to as a "block", as the proposal will require substantial work to address the concern or may need to be rethought all together.
 
-When possible, it is preferable to raise an actionable constraint. Blocks happen but should be avoided.
+<p>When possible, it is preferable to raise an actionable constraint. Blocks happen but should be avoided.
 
 <p>When a champion proposes a feature, a delegate may suggest additional constraints and ask that the champion incorporate them into the proposal. The delegate raising a constraint should expect to spend time working with the champion to help flesh out the constraint and learn about other constraints that went into the proposal. The delegate should expect to spend time working with the champion to help flesh out the constraint and learn about other constraints that went into the proposal, and to consider different possible tradeoffs.
 
-<p>A delegate may pose a constraint as necessary for advancement to a future stage before it is being considered for advancement to that stage. In this situation, the delegate should expect to work with the champion and other delegates during earlier stages to incorporate their constraint into the solution. In general, the earlier a constraint is raised, the better.
+<p>A delegate may pose a constraint as necessary for advancement to a future stage before it is being considered for advancement to that stage. We encourage this to also be done asynchronously in issues, and in incubator calls, as well as in plenary. In this situation, the delegate should expect to work with the champion and other delegates during earlier stages to incorporate their constraint into the solution. In general, the earlier a constraint is raised, the better.
 
 <p>In particular, given that consensus on Stage 3 means "the solution is complete", i.e., all open design issues have been resolved including anticipated implementation and ecosystem compatibility issues. All TC39 participants should validate the design of proposals they care about before granting Stage 3 consensus.
 
@@ -199,11 +199,7 @@ When possible, it is preferable to raise an actionable constraint. Blocks happen
 
 <p>The committee must record a good description of why a proposal did not advance, both in the meeting notes and within an issue in the proposal's tracker, but not limited to those. This way, in future meetings and future proposals, we can learn from failed proposals and have a good record of why they failed.
 
-<p>In order to ensure that the committee is able to do its work effectively, there are restrictions to witholding consensus.
-
-<p>The ability to withhold consensus for reaching stage 1, 2 and 3 is not limited but constraints introduced should be according to their stage.
-
-<p>The ability to withold consensus for reaching stage 4 is limited. Proposals which have fulfilled the acceptance criteria may not be withheld from advancement unless the constraint is related to implementation experience or identifies an issue or information which has not previously been discussed by the committee. Withholding consensus for stage 4 advancement is limited, as during stage 3 the intention is to allow implementers to invest in implementations, and maintain the significance of stage 3 in the process.
+<p>In order to ensure that the committee is able to do its work effectively, there are restrictions to the introduction of new constraints and relitigation of addressed issues in stage 3. Proposals which have fulfilled the acceptance criteria may not be withheld from advancement unless the constraint is related to implementation experience or identifies an issue or information which has not previously been discussed by the committee. Withholding consensus for stage 4 advancement is limited, as during stage 3 the intention is to allow implementers to invest in implementations, and maintain the significance of stage 3 in the process.
 
 <h2>Conditional Advancement</h2>
 
@@ -219,7 +215,7 @@ When possible, it is preferable to raise an actionable constraint. Blocks happen
 
 <p>Champions (or, frequently "champion groups" of several members) are authors and editors of proposals. The champion is responsible for the evolution of the proposal from Stage 0 through Stage 4, at which point maintenance transfers to the editor group. Champions have admin permissions in the proposal repository and can freely make changes within this repository. Periodically, champions may bring their proposal to TC39 to ask for consensus on stage advancement.
 
-<p>When asking for advancement, the champion is expected to make the whole proposal accessible for review by the committee, by explaining its contents, providing supporting documentation, etc. Major changes should be presented explicitly, but small, insiginficant changes ("<em>nits</em>") may be resolved on the issue tracker without bringing the whole committee in. Examples of <em>nits</em> are issues of taste such as minor naming adjustments. Reviewers and editors are expected to look over these details and raise concerns if they have any.
+<p>When asking for advancement, the champion is expected to make the whole proposal accessible for review by the committee, by explaining its contents, providing supporting documentation, etc. Material changes should be presented explicitly.
 
 <p>Although there is no requirement to do so, it is often beneficial for champions to keep the committee updated with periodic status updates explaining major changes. These status updates do not require consensus; consensus is only required for stage advancement. A significant design change may require that the committee has a chance to re-evaluate if the proposal is in the appropriate stage.
 
