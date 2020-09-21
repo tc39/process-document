@@ -173,13 +173,25 @@
 
 <p>When an addition is accepted at the “candidate” (stage 3) maturity level, the committee is signifying that it believes design work is complete and further refinement will require implementation experience, significant usage and external feedback.
 
-<h2>Cases where the committee does not come to consensus</h2>
+<h2>Steps to achieving consensus</h2>
 
-<p>During the discussion of a proposal in a given stage any aspect may be discussed, including issues that will be of concerns in a future stage of the proposal. A proposal’s advancement may be "blocked", or consensus may be withheld, in the case that the proposal has flaws in its current design as outlined by the process stages. There are two forms that this typically takes: constraints or blocks.
+<p>During the discussion of a proposal in a given stage any aspect may be discussed, including issues that will be of concerns in a future stage of the proposal. The committee may come to a point where consensus is not reached in committee regarding the feature. There are two forms that this typically takes, and these are colloquially refered to as constraints or blocks.
 
 <p>A constraint refers to an desired property of the proposal, accompanied by a rationale. Frequently, many different conflicting constraints are posited about proposals, and the committee collectively may make tradeoffs selecting a particular design even though it compromises one or more constraints.
 
-Delegates may consider that the violation of a constraint is sufficiently serious reason to withhold their consensus for stage advancement. If consensus is not achieved, then this must be accompanied by a reason why a proposal should not advance in its present form, that is recorded by the committee.
+<p>Delegates should openly give feedback on proposals, especially when they have significant concerns, and especially for a proposal for stage advancement where the concern is relevant to the stage. Delegates should raise their concerns whether or not it is a cause for withholding consensus, in order to help the champion resolve any issues.
+
+<p>During the presentation of a feature, a delegate may suggest additional constraints and ask that the champion incorporate them into the proposal. The delegate raising a constraint should expect to spend time working with the champion to help flesh out the constraint and learn about other constraints that went into the proposal. The delegate should expect to spend time working with the champion to help flesh out the constraint and learn about other constraints that went into the proposal, and to consider different possible tradeoffs.
+
+<p>A delegate may pose a constraint as necessary for advancement to a future stage before it is being considered for advancement to that stage. We encourage this to also be done asynchronously in issues, and in incubator calls, as well as in plenary. In this situation, the delegate should expect to work with the champion and other delegates during earlier stages to incorporate their constraint into the solution. In general, the earlier a constraint is raised, the better.
+
+<p>Given that consensus on Stage 3 means "the solution is complete", i.e., all open design issues have been resolved including anticipated implementation and ecosystem compatibility issues. All TC39 participants should validate the design of proposals they care about before granting Stage 3 consensus.
+
+<p>In order to ensure that the committee is able to do its work effectively, there are restrictions to the introduction of new constraints and relitigation of addressed issues in stage 3. Proposals which have fulfilled the acceptance criteria may not be withheld from advancement unless the constraint is related to implementation experience or identifies an issue or information which has not previously been discussed by the committee. Withholding consensus for stage 4 advancement is limited, as during stage 3 the intention is to allow implementers to invest in implementations, and maintain the significance of stage 3 in the process.
+
+<h2>Cases where the committee does not come to consensus</h2>
+
+<p>Delegates may consider that the violation of a constraint is sufficiently serious reason to withhold their consensus for stage advancement. If consensus is not achieved, then this must be accompanied by a reason why a proposal should not advance in its present form, that is recorded by the committee.
 
 <p>In this case, the committee should provide an actionable plan whenever possible. The committee does not have an established concept of a rejected proposal--it is always possible for the champion to make changes and come back to ask for consensus.
 
@@ -187,21 +199,11 @@ Delegates may consider that the violation of a constraint is sufficiently seriou
 
 <p>When possible, it is preferable to raise an actionable constraint. Blocks happen but should be avoided.
 
-<p>When a champion proposes a feature, a delegate may suggest additional constraints and ask that the champion incorporate them into the proposal. The delegate raising a constraint should expect to spend time working with the champion to help flesh out the constraint and learn about other constraints that went into the proposal. The delegate should expect to spend time working with the champion to help flesh out the constraint and learn about other constraints that went into the proposal, and to consider different possible tradeoffs.
-
-<p>A delegate may pose a constraint as necessary for advancement to a future stage before it is being considered for advancement to that stage. We encourage this to also be done asynchronously in issues, and in incubator calls, as well as in plenary. In this situation, the delegate should expect to work with the champion and other delegates during earlier stages to incorporate their constraint into the solution. In general, the earlier a constraint is raised, the better.
-
-<p>In particular, given that consensus on Stage 3 means "the solution is complete", i.e., all open design issues have been resolved including anticipated implementation and ecosystem compatibility issues. All TC39 participants should validate the design of proposals they care about before granting Stage 3 consensus.
-
-<p>Delegates should openly give feedback on proposals, especially when they have significant concerns, and especially for a proposal for stage advancement where the concern is relevant to the stage. Delegates should raise their concerns whether or not it is a cause for withholding consensus, in order to help the champion resolve any issues.
-
-<p>A delegate may also request additional time to consider the proposal, if a topic they had not considered comes up during discussion. In this case, the delegate should give the champion some actionable request for how to facilitate the analysis (e.g., the champion could walk through the proposal with the delegate offline). In practice, this work should be done during the plenary, or before the next meeting. A delegate may also request additional time to consider the proposal, if it was added to the agenda after the deadline for proposal advancement.
-
 <p>The committee must record a good description of why a proposal did not advance, both in the meeting notes and within an issue in the proposal's tracker, but not limited to those. This way, in future meetings and future proposals, we can learn from failed proposals and have a good record of why they failed.
 
-<p>In order to ensure that the committee is able to do its work effectively, there are restrictions to the introduction of new constraints and relitigation of addressed issues in stage 3. Proposals which have fulfilled the acceptance criteria may not be withheld from advancement unless the constraint is related to implementation experience or identifies an issue or information which has not previously been discussed by the committee. Withholding consensus for stage 4 advancement is limited, as during stage 3 the intention is to allow implementers to invest in implementations, and maintain the significance of stage 3 in the process.
-
 <h2>Conditional Advancement</h2>
+
+<p>A delegate may also request additional time to consider the proposal, if a topic they had not considered comes up during discussion. In this case, the delegate should give the champion some actionable request for how to facilitate the analysis (e.g., the champion could walk through the proposal with the delegate offline). In practice, this work should be done during the plenary, or before the next meeting. A delegate may also request additional time to consider the proposal, if it was added to the agenda after the deadline for proposal advancement.
 
 <p>The committee may resolve to <em>conditionally advance</em> a proposal to address a particular well-understood condition offline, e.g., making a particular small specification change concrete, among a group of interested people who have an idea of the solution. Conditional advancement is time-limited, giving the person raising the concern time to discuss with the champions and authors about their concerns. If a proposal has a conditional advancement, an issue must be opened on the proposal’s repository. If the issue is resolved, the proposal automatically reaches the next stage without further discussion by the committee. If the issue cannot be resolved, the proposal does not advance.
 
