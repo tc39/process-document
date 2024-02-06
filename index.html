@@ -36,117 +36,116 @@
 
 <table>
   <caption>ECMAScript Proposal Stages</caption>
+
   <thead>
     <tr>
       <th>Stage
-      <th>Purpose
+      <th>Status
       <th>Entrance Criteria
-      <th>Acceptance Signifies
-      <th>Spec Quality At Entrance
-      <th>Post-Acceptance Changes Expected
-      <th>Implementation Types Expected*
+      <th style="cursor: help" title="These are the actions that will be undertaken by the committee and the proposal authors while the proposal is in this stage.">Purpose
     </tr>
   </thead>
+
   <tr>
     <td>0
-    <td>Allow input into the specification
-    <td>None
-    <td>N/A
-    <td>N/A
-    <td>N/A
-    <td>N/A
+    <td>This is a new proposal. It is not currently being considered by the committee.
+    <td>None. New proposals are assigned this stage by their authors outside of the usual advancement process.
+    <td>
+      Ideation and exploration. Define a problem space in which the committee and the champions can focus their efforts.
+      <ul>
+        <li>Make the case for an improvement
+        <li>Describe the shape of some possible solutions
+        <li>Identify potential challenges
+        <li>Research how the problem is dealt with using available facilities today
+        <li>Research how the problem has been solved by other languages or in the library ecosystem
+      </ul>
   </tr>
+
   <tr>
     <td>1
+    <td>This proposal is under consideration. The committee expects to devote time to examining the identified problem space, the full breadth of possible solutions, and cross-cutting concerns. 
     <td>
       <ul>
-        <li>Make the case for the addition
-        <li>Describe the shape of a solution
-        <li>Identify potential challenges
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>Identified “champion” who will advance the addition
+        <li>Identified a champion or champion group who will advance the addition
         <li>Prose outlining the problem or need and the general shape of a solution
-        <li>Illustrative examples of usage
-        <li>High-level API
         <li>Discussion of key algorithms, abstractions and semantics
-        <li>Identification of potential “cross-cutting” concerns and implementation challenges/complexity
+        <li>Identification of potential cross-cutting concerns and implementation challenges/complexity
         <li>A publicly available repository for the proposal that captures the above requirements
       </ul>
     </td>
-    <td>The committee expects to devote time to examining the problem space, solutions and cross-cutting concerns
+    <td>
+      Designing a solution.
+      <ul>
+        <li>Make the case for a particular solution or solution space
+        <li>Resolve any cross-cutting concerns
+      </ul>
     </td>
-    <td>None
-    <td>Major
-    <td>Polyfills / demos
   </tr>
+
   <tr>
     <td>2
-    <td>Precisely describe the syntax and semantics using formal spec language
+    <td>The committee has chosen a preferred solution or solution space, but the design is a draft and may still change significantly. The committee expects the feature to be developed and eventually included in the standard, but due to reasons that may not be apparent at this stage, the feature may never be included in the standard.
     <td>
       <ul>
-        <li>Above
-        <li>Initial spec text
+        <li>Proposal document describes all high-level APIs and syntax
+        <li>Illustrative examples of usage
+        <li>Initial spec text including all major semantics, syntax, and APIs. Placeholders, TODOs, and editorial issues are acceptable
       </ul>
     </td>
-    <td>The committee expects the feature to be developed and eventually included in the standard
-    <td>Draft: all <em>major</em> semantics, syntax and API are covered, but TODOs, placeholders and editorial issues are expected
-    <td>Incremental
-    <td>Experimental
+    <td>
+      Refining the solution.
+      <ul>
+        <li>Work out minor details such as ordering of observable effects, handling of invalid inputs, API names, etc.
+        <li>Receive and address spec text reviews from the assigned reviewers and the appropriate editor group
+        <li>Produce experimental implementations such as loosely-correct (not for production use) polyfills to aid in validating the design and exploring the details
+        <li>Investigate integration with relevant host APIs, if necessary
+      </ul>
+    </td>
   </tr>
+
   <tr>
     <td>2.7
-    <td>Gain initial experience with the feature through testing and prototyping
+    <td>The proposal is approved in principle and undergoing validation. The solution is complete and no further work is possible without feedback from tests, implementations, or usage. No changes to the proposal will be requested by the committee aside from those elicited through testing, implementation, or usage experience.
     <td>
       <ul>
-        <li>Above
-        <li>Complete spec text
-        <li>Designated reviewers have signed off on the current spec text
-        <li>ECMAScript editors have signed off on the current spec text
+        <li>Complete spec text: all semantics, syntax, and APIs are completely described
+        <li>Assigned reviewers have signed off on the current spec text
+        <li>Relevant editor group has signed off on the current spec text
+      </ul>
+    <td>
+      Testing and validation.
+      <ul>
+        <li>Validate the design of the feature through the development of a rigorous and comprehensive test suite
+        <li>Develop spec-compliant prototypes to validate implementability, as necessary, or aid in test development
       </ul>
     </td>
-    <td>The solution is complete and no further work is possible without feedback from tests, implementations, or usage. No changes to the proposal will be requested aside from those elicited through testing or implementation experience.
-    <td>Complete: all semantics, syntax and API are completely described
-    <td>Limited: only those resulting from new information obtained through testing or usage experience
-    <td>Spec compliant prototypes
   </tr>
+
   <tr>
     <td>3
-    <td>Indicate that further refinement will require feedback from implementations or users
+    <td>The proposal has been recommended for implementation. No changes to the proposal are expected, but some necessary changes may still occur due to web incompatibilities or feedback from production-grade implementations.
     <td>
       <ul>
-        <li>Above
         <li>The feature has sufficient testing and appropriate pre-implementation experience
       </ul>
     </td>
-    <td>The solution is complete and no further work is possible without implementation experience, significant usage and external feedback.
-    <td>Complete: all semantics, syntax and API are completely described
-    <td>Limited: only those deemed critical based on implementation experience
-    <td>Spec compliant production
+    <td>Gaining implementation experience and discovering any web compatibility or integration issues.
   </tr>
+
   <tr>
     <td>4
-    <td>Indicate that the addition is ready for inclusion in the formal ECMAScript standard
+    <td>The proposed feature is complete and ready to be included in the standard. No further changes will be made to the proposal.
     <td>
       <ul>
-        <li>Above
-        <li><a href="https://github.com/tc39/test262">Test262</a> acceptance tests have been written for mainline usage scenarios, and merged
-        <li>Two compatible implementations which pass the acceptance tests
+        <li>Two compatible implementations which pass the test262 acceptance tests
         <li>Significant in-the-field experience with shipping implementations, such as that provided by two independent VMs
-        <li>A pull request has been sent to <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> with the integrated spec text
-        <li>All ECMAScript editors have signed off on the pull request
+        <li>A pull request has been sent to <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> or <a href="https://github.com/tc39/ecma402">tc39/ecma402</a>, as appropriate, with the integrated spec text
+        <li>The relevant editor group has signed off on the pull request
       </ul>
     </td>
-    <td>The addition will be included in the soonest practical standard revision
-    <td>Final: All changes as a result of implementation experience are integrated
-    <td>None
-    <td>Shipping
+    <td>Integration into the draft specification and eventual inclusion in a yearly standard publication.
   </tr>
 </table>
-
-<p>* This column does not indicate a requirement for advancement, but simply a general expectation.
 
 <h2>Input into the process</h2>
 
