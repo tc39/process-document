@@ -16,6 +16,14 @@
     border-collapse: collapse;
   }
 
+  #stages {
+    table-layout: fixed;
+    width: 100%;
+  }
+  #stages th:first-child {
+    width: 55px;
+  }
+
   ul {
     padding: 0 1.5em;
     margin: 0;
@@ -34,7 +42,7 @@
 
 <p>Proposals at stage 1 and beyond should be owned by the TC39 committee. Upon proposal acceptance, any externally-owned repositories should be transferred by following the <a href="https://github.com/tc39/proposals#onboarding-existing-proposals">onboarding instructions</a>.
 
-<table>
+<table id="stages">
   <caption>ECMAScript Proposal Stages</caption>
 
   <thead>
